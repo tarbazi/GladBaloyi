@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.4.2</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+    <groupId>com.enviro</groupId>
+    <artifactId>MasanaBaloyi</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>MasanaBaloyi</name>
+    <description>eTalent Assessment Task</description>
+
+    <properties>
+        <java.version>17</java.version>
+    </properties>
+
+    <dependencies>
+        <!-- Spring Boot Web dependency (for REST APIs) -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!-- Spring Boot Data JPA (for database interaction) -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+
+        <!-- H2 Database (for testing or in-memory DB) -->
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+
+        <!-- MySQL Connector (if you're using MySQL as your database) -->
+        <!-- Uncomment if using MySQL -->
+        <!--
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+        -->
+
+        <!-- Spring Boot Test dependency for unit tests -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!-- Spring Boot Maven plugin to package the application -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <!-- Added maven-surefire-plugin for better test reporting -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0-M5</version> <!-- Ensure you're using the latest stable version -->
+                <configuration>
+                    <useTestNG>false</useTestNG> <!-- Disable TestNG if not needed -->
+                    <forkCount>1</forkCount> <!-- Fork one JVM per test -->
+                    <reuseForks>false</reuseForks> <!-- Do not reuse forks between tests -->
+                    <testFailureIgnore>false</testFailureIgnore> <!-- Fail on test errors -->
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

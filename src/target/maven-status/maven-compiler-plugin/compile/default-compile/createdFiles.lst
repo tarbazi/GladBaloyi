@@ -1,0 +1,9 @@
+com\enviro\assessment\grad001\MasanaBaloyi\Service\GuidelineService.class
+com\enviro\assessment\grad001\MasanaBaloyi\API\Model\RecyclableWaste.class
+com\enviro\assessment\grad001\MasanaBaloyi\API\Model\Response.class
+com\enviro\assessment\grad001\MasanaBaloyi\API\Model\Guideline.class
+com\enviro\assessment\grad001\MasanaBaloyi\Repository\GuidelineInterface.class
+com\enviro\assessment\grad001\MasanaBaloyi\API\Model\NonRecyclableWaste.class
+com\enviro\assessment\grad001\MasanaBaloyi\MasanaBaloyiApplication.class
+com\enviro\assessment\grad001\MasanaBaloyi\API\Controller\GuidelineController.class
+com\enviro\assessment\grad001\MasanaBaloyi\API\Model\RecyclingTips.class
