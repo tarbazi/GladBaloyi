@@ -15,7 +15,7 @@ public class RecyclingTips {
         
     }
     
-    public RecyclingTips(int id, String tip){
+    public RecyclingTips(String tip){
         this.tip = tip;
     }
 

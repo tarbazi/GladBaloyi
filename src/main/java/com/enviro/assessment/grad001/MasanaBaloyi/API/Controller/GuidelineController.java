@@ -17,33 +17,33 @@ import java.util.List;
 @RestController
 public class GuidelineController {
 
-    private GuidelineService wasteService;
+    private GuidelineService service;
 
     @Autowired
-    public GuidelineController(GuidelineService wasteService){
-        this.wasteService = wasteService;
+    public GuidelineController(GuidelineService service){
+        this.service = service;
     }
 
     @GetMapping("/listGuidelines/")
     public List<Guideline> listGuidelines(){
-        return wasteService.listGuidelines();
+        return service.listGuidelines();
     }
 
     @GetMapping("/addGuideline/{message}")
     public Response addGuideline(@PathVariable String message){
-        Response response = wasteService.addGuideline(message);
+        Response response = service.addGuideline(message);
         return response;
     }
 
     @GetMapping("/updateGuideline/{id}/{message}")
     public Response updateGuideline(@PathVariable int id, @PathVariable String message){
-        Response response = wasteService.updateGuideline(id, message);
+        Response response = service.updateGuideline(id, message);
         return response; 
     }
 
     @GetMapping("/deleteGuideline/{id}")
     public Response deleteGuideline(@PathVariable int id){
-        Response response = wasteService.deleteGuideline(id);
+        Response response = service.deleteGuideline(id);
         return response;
     }
 
